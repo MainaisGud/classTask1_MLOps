@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // once you sign up for Docker hub, use that user_id here
-        registry = "faizanshabbir0/mypythonapp"
+        registry = "amnashafiq0/mypythonapp"
         // update your credentials ID after creating credentials for connecting to Docker Hub
         registryCredential = 'dockerhub'
         dockerImage = ''
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/NUCES-ISB/i190402_i192027_A2']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/NUCES-ISB/i190742_i191978_A2']]])
             }
         }
 
